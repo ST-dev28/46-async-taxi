@@ -16,6 +16,8 @@ class Taxi {
     async drive(distance) {
         for (let i = 1; i <= distance; i++) {
             await this.print(i)
+                //kiekvienas promise turi dvi busenas: sekmes atveju ".then" (resolve teksta spausdina (msg)), nesekmes randa klaida su ".catch" (su reject tekstu)
+                // then ir catch gali buti keli pagal butinuma
                 .then((msg) => {
                     console.log(msg);
                 })
